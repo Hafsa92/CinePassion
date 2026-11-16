@@ -1,35 +1,46 @@
 <!DOCTYPE html>
+<!-- Indique au navigateur que c'est une page HTML5 -->
 <html lang="fr">
+<!-- <html> = la page entière. lang="fr" = la page est en français -->
+
 <head>
+  <!-- <head> = infos invisibles sur la page -->
+
   <meta charset="UTF-8">
+  <!-- UTF-8 = permet d'afficher les accents correctement -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Indispensable pour que la page s'adapte aux téléphones (responsive) -->
+
   <title>Ciné Passion - Films</title>
+  <!-- Titre affiché dans l'onglet du navigateur -->
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Charge la police Poppins (charte graphique) -->
+
   <link rel="stylesheet" href="Film.css">
+  <!-- Relie la page au fichier CSS -->
 </head>
+
 <body>
+  <!-- <body> = tout ce qui est affiché à l'écran -->
 
-      <h1>Tous nos films</h1>
-      <p>Clique sur un film pour voir ses séances du jour et sa bande-annonce.</p>
+  <!-- ================= MENU DE NAVIGATION ================= -->
+  <header class="header">
+    <!-- <header> = l'en-tête de la page -->
 
-      <article class="Avanger" data-genre="Action">
-        <img src="" alt="Affiche du film Titre du film 1">
-        <div class="film-infos">
-          <h2>Titre du film 1</h2>
-          <p class="genre">Action</p>
-          <p class="date">Sortie : 12 novembre 2026</p>
-        </div>
-        <div class="details">
-          <h3>Séances du jour</h3>
-          <ul class="horaires">
-            <li>14:00</li>
-            <li>17:15</li>
-            <li>20:30</li>
-          </ul>
-          <h3>Bande-annonce</h3>
-        </div>
-      </article>
+    <a href="../Accueil/accueil.html" class="logo">Ciné<span>Passion</span></a>
+    <!-- <a> = un lien. "../" = on remonte d'un dossier.
+         <span> = permet de colorer "Passion" en rouge avec le CSS -->
 
-      
+    <nav class="nav">
+      <!-- <nav> = le menu de navigation -->
+      <a href="../Accueil/accueil.html">Accueil</a>
+      <a href="Film.html" class="active">Films</a>
+      <!-- class="active" = page actuelle -->
+      <a href="../Avant-premieres/avant-premieres.html">Avant-premières</a>
+    </nav>
+  </header>
+
 </body>
 </html>
