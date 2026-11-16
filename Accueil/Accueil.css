@@ -40,9 +40,84 @@ nav a.active {
 }
 .banniere{
     padding: 85px 7%;
-    background: linear-gradient();
+    background: linear-gradient(110deg, #26070d, #0b0b0d 75%);
 }
-
+.presentation{
+    max-width: 750px;
+}
+.categorie{
+    display: block;
+    color: #e50925;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.presentation h1 {
+    display: block;
+    position: static;
+    font-size: 48px;
+    line-height: 17px;
+    margin-bottom: 25px;
+}
+.presentation p{
+    color: #c4c4c4;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+.presentation a{
+    display: inline-block;
+    background-color: #e50925;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nouveautés{
+    padding: 55px 7%;
+}
+.titre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.titre h2{
+    font-size: 30px;
+    border-left: 4px solid #e50925;
+    padding-left: 15px;
+}
+.titre a{
+    color: #e50925;
+    text-decoration: none;
+}
+.description {
+    color: #aaa;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.liste-films{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.film{
+    width: 220px;
+    background-color: #17171b;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s
+}
+.film-hover{
+    transform: translateY(-7px);
+}
+.film img{
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    display: block;
+}
 
 
 
