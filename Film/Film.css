@@ -1,0 +1,17 @@
+
+:root {
+  --rouge: #B22222;
+  --noir: #000000;
+  --blanc: #FFFAFA;
+  --gris: #708090;
+  --bleu: #4682B4;
+  --bleu-marine: #191970;
+}
+
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;                    /* pou mettre en gras */
+  color: var(--blanc);
+  text-decoration: none;               /* pour pa souligné */
+}
