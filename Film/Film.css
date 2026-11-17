@@ -1,19 +1,11 @@
-:root {
-  --rouge: #e50925;
-  --noir: #000000;
-  --blanc: #FFFAFA;
-  --gris: #708090;
-  --bleu: #4682B4;
-  --bleu-marine: #191970;
-}
-<style general>
+/* Style général */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    background-color: #000000;
+    background-color: #0b0B0D;
     color: white;
     font-family: Arial, sans-serif;
 }
@@ -27,10 +19,10 @@ body{
     border-bottom: 1px solid #292929;
 }
 .logo {
-  font-size: 27px;
-  font-weight: bold;
-  color: #e50925;
-  text-decoration: none;
+    font-size: 27px;
+    font-weight: bold;
+    color: #e50925;
+    text-decoration: none;
 }
 nav{
     display: flex;
