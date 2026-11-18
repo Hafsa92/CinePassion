@@ -1,4 +1,3 @@
-
 /* Style général */
 *{
     margin: 0;
@@ -103,46 +102,33 @@ nav a.active {
     gap: 25px;
 }
 .film{
-    width: 220px;
+    width: 100%;
     background-color: #17171b;
     border-radius: 12px;
     overflow: hidden;
-    transition: 0.3s
+    transition: transform 0.3s ease;
 }
 .film-hover{
     transform: translateY(-7px);
 }
 .film img{
     width: 100%;
-    height: 290px;
+    height: 480px;
     object-fit: cover;
     display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-img{
-    max-width: 100%;
-    height: auto;
-    display: block;
+.film h3 {
+    text-align: center;
+    padding: 15px;
+    font-size: 25px;
 }
-.film img{
-    width: 220px;
-    height: 290px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
+.film:hover {
+    transform: translateY(-14px);
+}
+.film:hover {
+    transform: translateY(-14px);
+    background-color: #383858;
 }
 h1{
     margin-bottom: 25px;
@@ -165,4 +151,59 @@ nav{
 }
 a{
     text-decoration: none;
+}
+.boutons-film{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 15px;
+}
+.boutons-film a,
+.boutons-film summary{
+    background-color: #e50925;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+.boutons-film a:hover,
+.boutons-film summary:hover{
+    background-color: #b8071c;
+}
+.boutons-film detail p{
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+}
+/*CARROUSEL*/
+.carrousel{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.fleche{
+    background-color: #e50925;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.fleche:hover{
+    background-color: #b8071c;
+    transform: scale(1.1);
+}
+.liste-films{
+    display: flex;
+    gap: 25px;
+    overflow: hidden;
 }

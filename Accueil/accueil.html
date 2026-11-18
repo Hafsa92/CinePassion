@@ -9,15 +9,14 @@
 </head>
 <body>
 <header class="navbar">
-    <div class="logo">
-        CinéPassion
-    </div>
+    <a href="../Accueil/accueil.html" class="logo">Ciné<span>Passion</span></a>
+<!-- en gros sa permet que si j'appuis sur le logo sa revien a l'acceuille-->
     <nav>
-        <a href="Accueil.html" class="active">Accueil</a>
-        <a href="fil*
-        
-        .html">Films</a>
-        <a href="Avant-première">Avant-première</a>
+      <a href="../Accueil/accueil.html">Accueil</a>
+      <a href="../Film/film.html">Film</a>
+<!-- class="active" = page actuelle -->
+      <a href="../Avant-premieres/avant-premieres.html">Avant-premières</a>
+<!-- Les 3 ligne de au dessus -clique sur accueile film ou avant premier sa nous emmenne a la page -->
     </nav>
 </header>  
 <main>
@@ -46,14 +45,25 @@
             <a href="films.html">Voir tout les films</a>
         </div>
         <p class="description">
-            Decouvrez les derniers films actuellement à l'affcihe
+            Découvrez les derniers films actuellement à l'affiche
         </p>
-        <div class="liste-films">
+        <div class="caroussel">
+            <button class="fleche" id="precedent"><</button>
+            <div class="liste-films" id="listeFilms">
+            </div>
             <!--Film 1-->
             <article class="film">
-                <img src="https://www.maville.com/cinemamvi/-199_0/infirmary.jpg" alt="Affiche film 1"
-            </article> 
-
+                <img src="https://all.web.img.acsta.net/r_2000_x/img/62/4e/624ef2ea4d39dd166b8578bc184cf24d.jpg" alt="Affiche film">
+                <h3>Dune</h3>
+                <div class="boutons-film">
+                    <a href="https://www.bing.com/videos/riverview/relatedvideo?q=bande+annonce+dune+3&&mid=E14F5EF91A71EE9419DFE14F5EF91A71EE9419DF&churl=https%3a%2f%2fwww.youtube.com%2fchannel%2fUC_i8X3p8oZNaik8X513Zn1Q&mcid=1F85A7ED98144981A78CFBD09D78849C&FORM=VRDGAR">Bande Annonce</a>
+                    <details>
+                        <summary>Horaires</summary>
+                        <p>16h00 - 18h00 - 22h00</p>
+                    </details>
+                </article>
+            </div>
+            <button class="fleche" id="suivant">></button>
         </div>
     </section>
 </main>
