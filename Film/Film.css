@@ -1,17 +1,40 @@
-
-:root {
-  --rouge: #B22222;
-  --noir: #000000;
-  --blanc: #FFFAFA;
-  --gris: #708090;
-  --bleu: #4682B4;
-  --bleu-marine: #191970;
+/* Style général */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-
+body{
+    background-color: #0b0B0D;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+/* Navigation */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 7%;
+    background-color: #141416;
+    border-bottom: 1px solid #292929;
+}
 .logo {
-  font-size: 1.6rem;
-  font-weight: 700;                    /* pou mettre en gras */
-  color: var(--blanc);
-  text-decoration: none;               /* pour pa souligné */
+    font-size: 27px;
+    font-weight: bold;
+    color: #e50925;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    gap: 35px;
+}
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3S;
+}
+nav a:hover
+nav a.active {
+    color: #e50925;
 }

@@ -117,11 +117,43 @@ nav a.active {
     object-fit: cover;
     display: block;
 }
+<<<<<<< HEAD
 
 .film h3 {
     text-align: center;
     padding: 15px;
     font-size: 25px;
+=======
+.film {
+    transition: transform 0;3s ease, background-color: 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.film:hover {
+    transform: translateY(-14px);
+}
+.film:hover {
+    transform: translateY(-14px);
+    background-color: #383858;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+>>>>>>> 8a68fa8df293a8047a4a66a98c87aa921c154091
 }
 .film:hover {
     transform: translateY(-14px);
