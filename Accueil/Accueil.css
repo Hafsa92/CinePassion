@@ -183,27 +183,45 @@ a{
 }
 /*CARROUSEL*/
 .carrousel{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-.fleche{
-    background-color: #e50925;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.fleche:hover{
-    background-color: #b8071c;
-    transform: scale(1.1);
+    position: relative;
+    width: 100%;
+    max-width: 500Px;
+    margin: 40px auto;
+    padding: 0 55px;
+    box-sizing: border-box;
 }
 .liste-films{
     display: flex;
-    gap: 25px;
+    width: 100%;
     overflow: hidden;
+}
+.film{
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.film img{
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+}
+.fleche{
+    position: absolute;
+    top: 240px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #e50925;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+#precedent{
+    left: 5px;
+}
+#suivant{
+    right: 5px;
 }
