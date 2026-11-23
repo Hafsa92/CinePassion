@@ -245,12 +245,6 @@ nav a.active {
     border-color: #e50925;          /* la bordure devient rouge */
     background-color: #1d1d20;      /* le fond s'éclaircit un peu */
 }
-/* Message quand il n'y a pas de séance */
-#message {
-    padding: 20px 7% 0;     /* espace autour du message */
-    color: #aaa;            /* gris moyen */
-}
-
 
 
 /* ===================== RESPONSIVE pour les temphone ===================== */

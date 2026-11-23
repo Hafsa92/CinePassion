@@ -1,0 +1,236 @@
+/* ===== STYLE GÉNÉRAL ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0b0b0d;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== NAVIGATION ===== */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 7%;
+    background-color: #141416;
+    border-bottom: 1px solid #292929;
+}
+.logo{
+    font-size: 27px;
+    font-weight: bold;
+    color: #e50925;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    gap: 35px;
+}
+nav a{
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+nav a:hover,
+nav a.active{
+    color: #e50925;
+}
+
+/* ===== BANNIÈRE (même dégradé que l'accueil) ===== */
+.banniere{
+    padding: 85px 7%;
+    background:
+    radial-gradient(ellipse at 25% 50%, rgba(120, 0, 25, 0.25), transparent 55%),
+    linear-gradient(110deg, #4a0712, #0b0b0d 75%);
+}
+.presentation{
+    max-width: 750px;
+}
+.presentation h1{
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 15px rgba(229, 9, 37, 0.25);
+}
+.presentation p{
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+/* ===== TITRE DE SECTION (barre rouge) ===== */
+.avant-premieres{
+    padding: 55px 7%;
+}
+.titre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.titre h2{
+    font-size: 30px;
+    border-left: 4px solid #e50925;
+    padding-left: 15px;
+}
+.titre a{
+    color: #e50925;
+    text-decoration: none;
+}
+
+/* ===== UN FILM (même présentation que la page Film) ===== */
+.film{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 25px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #292929;
+}
+
+/* Affiche */
+.affiche{
+    position: relative;
+    width: 205px;
+    flex-shrink: 0;
+}
+.affiche img{
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 5px;
+    background-color: #1c1c20;
+}
+.badge{
+    position: absolute;
+    top: -35px;
+    left: 230px;
+    background-color: #e50925;
+    color: white;
+    padding: 7px 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* Informations */
+.informations{
+    max-width: 330px;
+}
+.informations h2{
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+.date,
+.genre,
+.realisateur,
+.acteurs{
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #aaa;
+}
+.genre,
+.acteurs{
+    color: white;
+}
+
+/* Zone de droite : date de sortie + bande-annonce */
+.horaires{
+    flex: 1 1 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-content: flex-start;
+}
+.seance{
+    background-color: #141416;
+    color: white;
+    border: 1px solid #292929;
+    border-radius: 8px;
+    padding: 12px 16px;
+    text-align: left;
+    transition: 0.3s;
+}
+.seance h2{
+    font-size: 22px;
+}
+.seance small{
+    display: block;
+    color: #aaa;
+    font-size: 12px;
+}
+.seance:hover{
+    border-color: #e50925;
+    background-color: #1d1d20;
+}
+
+/* Bouton bande-annonce */
+.bande-annonce{
+    background-color: #e50925;
+    color: white;
+    padding: 20px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.bande-annonce:hover{
+    background-color: #b8071c;
+}
+
+/* ===== RESPONSIVE (téléphone) ===== */
+@media (max-width: 600px){
+    .navbar{
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 5%;
+    }
+    nav{
+        gap: 20px;
+    }
+    nav a{
+        font-size: 14px;
+    }
+    .banniere{
+        padding: 45px 5%;
+    }
+    .presentation h1{
+        font-size: 30px;
+    }
+    .avant-premieres{
+        padding: 35px 5%;
+    }
+    .titre{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .film{
+        flex-direction: column;
+    }
+    .affiche{
+        width: 160px;
+    }
+    .affiche img{
+        height: 215px;
+    }
+    .badge{
+        top: 10px;
+        left: 10px;
+    }
+    .informations{
+        max-width: 100%;
+    }
+    .horaires{
+        flex: none;
+        width: 100%;
+    }
+}
