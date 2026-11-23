@@ -1,77 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
+    <!--Permet de faire la liaison avec le css-->
     <link rel="stylesheet" href="Accueil.css">
+    
+    <!--Permet d'afficher correctement les accents-->
     <meta charset="UTF-8">
+
+    <!---->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Adapte le site a la taille de l'ecran-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!--titre-->
+    <title>Ciné Passion</title>
 </head>
 <body>
+
+
+<!--En tete du site (logo ect)-->
+
+
 <header class="navbar">
-    <a href="../Accueil/accueil.html" class="logo">Ciné<span>Passion</span></a>
-<!-- en gros sa permet que si j'appuis sur le logo sa revien a l'acceuille-->
+    <!-- en gros sa permet que si j'appuis sur le logo sa revien a l'acceuil-->
+    <a href="../Accueil/accueil.html" class="logo">
+        Ciné<span>Passion</span>
+    </a>
+
+    <!--balise pour naivuguer entre les pages-->
     <nav>
+
+    <!--Lien vers la page d'accueil-->
       <a href="../Accueil/accueil.html">Accueil</a>
+
+    <!--Lien vers la page de film-->
       <a href="../Film/film.html">Film</a>
-<!-- class="active" = page actuelle -->
+
+    <!--Lien pour aller a la page des avants premières-->
       <a href="../Avant-premieres/avant-premieres.html">Avant-premières</a>
-<!-- Les 3 ligne de au dessus -clique sur accueile film ou avant premier sa nous emmenne a la page -->
+
     </nav>
 </header>  
+
 <main>
 
 <!--GRANDE BANNIERE-->
+
+
     <section class="banniere">
+
+    <!--Contient (titre, texte boutons)-->
         <div class="presentation">
-        <h1>LE CINEMA COMMENCE ICI</h1>    
+
+    <!--titre de ma page le principal-->
+        <h1>LE CINEMA COMMENCE ICI</h1>  
+
+    <!--Mini texte de presentation en paragraphe-->  
         <p>Découvrez les dernières nouveautés, notre catalogue de films et les avants premières</p>
-        <a href="accueil.html">
+    
+    <!--Lien vers les nouveautes-->
+        <a href="#nouveautes">
             Découvrir nos nouveautés
         </a>
+
+    <!--lien vers les films-->
         <a href="Films.html">
-            Découvrir nos films
+            Découvrir nos Films
+        </a>
+    
+    <!--lien vers les ap-->
             <a href="AP">
                 Découvrir nos avants premières
             </a>
-        </a>
-        </div>
 
         </div>
+    </section>
 
-<!--Section nouveautes-->
-    <section class="nouveautés">
+
+<!--SECTION NOUVEAUTES-->
+
+    <section class="nouveautes" id="nouveautes">
+    
+    <!--titre de la section et lien vers les films-->
         <div class="titre">
             <h2>Les nouveautés</h2>
             <a href="films.html">Voir tout les films</a>
         </div>
+
+    <!--descrpition de la section-->
         <p class="description">
             Découvrez les derniers films actuellement à l'affiche
         </p>
-        <div class="caroussel">
-            <button class="fleche" id="precedent"><</button>
-            <div class="liste-films" id="listeFilms">
 
-<!--Film 1-->
+
+<!--Caroussel pour les films -->
+
+    <!--permet d'afficher et de concentrer tt les films-->
+        <div class="caroussel">
+
+    <!--liste des differnets films-->
+        <div class="liste-films" id="listeFilms">
+
+   <!--Film 1-->
 <article class="film">
 
+    <!-- Contient toute l'affiche du film -->
     <div class="image-film">
-        <button class="fleche" id="precedant">❮</button>
-        <img src="https://all.web.img.acsta.net/r_2000_x/img/62/4e/624ef2ea4d39dd166b8578bc184cf24d.jpg" alt="Dune">
-        <button class="fleche" id="suivant">❯</button>
-    </div>
-    <h3>DUNE</h3>
-    <div class="bouton-film">
-        <a href="https://www.bing.com/videos/riverview/relatedvideo?q=bande+annonce+dune+3&mid=E14F5EF91A71EE9419DFE14F5EF91A71EE9419DF&churl=https%3a%2f%2fwww.youtube.com%2fchannel%2fUC_i8X3p8oZNaik8X513Zn1Q&mcid=5BD72F878F06432890AFEFC0D0AA5941&FORM=VIRE">Bande Annonce</a>
 
-        <details>
-            <Summary>RESERVER</Summary>
-        </details>
-    </div>
+        <!-- Affiche du film -->
+        <img src="https://all.web.img.acsta.net/r_2000_x/img/62/4e/624ef2ea4d39dd166b8578bc184cf24d.jpg"
+             alt="Dune">
 
+        <!-- Informations directement sur l'affiche -->
+        <div class="info-film">
+
+            <h3>DUNE</h3>
+
+            <div class="bouton-film">
+
+                <a href="https://www.bing.com/videos/riverview/relatedvideo?q=bande+annonce+dune+3">
+                    Bande-annonce
+                </a>
+
+                <details>
+                    <summary>HORAIRES</summary>
+                </details>
+
+            </div>
+        </div>
+
+    </div>
 
 </article>
-    </section>
-</main>
+<!--Film 2-->
+<article class="film">
+
+    <!-- Contient toute l'affiche du film -->
+    <div class="image-film">
+
+        <!-- Affiche du film -->
+        <img src="https://all.web.img.acsta.net/r_2000_x/img/69/f9/69f9567bb10c3d978f42435fa00c8067.jpg"
+             alt="Avengers:Doomsday">
+
+<!-- Informations directement sur l'affiche -->
+        <div class="info-film">
+
+        <h3>AVENGERS:DOOMSDAY</h3>
+
+            <div class="bouton-film">
+
+                <a href="https://www.bing.com/videos/riverview/relatedvideo?q=bande+annonce+avengers+doomsday&&mid=D1DE11E3D92B78CFEB58D1DE11E3D92B78CFEB58&churl=https%3a%2f%2fwww.youtube.com%2fchannel%2fUCWeGmNiIrrqcDYdLh9sjVDg&mcid=2D81487C06EF4FC29B4618ABB85707A2&FORM=VRDGAR">
+                    Bande-annonce
+                </a>
+
+                <details>
+                    <summary>HORAIRES</summary>
+                </details>
+
+            </div>
+        </div>
+
+    </div>
+
+</article>
+<!--Film 3-->
+<article class="film">
+
+    <!-- Contient toute l'affiche du film -->
+    <div class="image-film">
+
+        <!-- Affiche du film -->
+        <img src="https://all.web.img.acsta.net/r_2000_x/img/dc/8b/dc8b750144f170d9a825eb8aef6f9e18.jpg"
+             alt="Scrooge">
+
+<!-- Informations directement sur l'affiche -->
+        <div class="info-film">
+
+        <h3>SCROOGE</h3>
+
+            <div class="bouton-film">
+
+                <a href="https://www.bing.com/videos/riverview/relatedvideo?q=scrooge+bande+annonce+vf&&mid=FEB84AD5C0726D7E6170FEB84AD5C0726D7E6170&churl=https%3a%2f%2fwww.youtube.com%2fchannel%2fUC_i8X3p8oZNaik8X513Zn1Q&mcid=A162BED7FA104974AC8F83453A7CA833&FORM=VRDGAR">
+                    Bande-annonce
+                </a>
+
+                <details>
+                    <summary>HORAIRES</summary>
+                </details>
+
+            </div>
+        </div>
+
+    </div>
+
+</article>
+<!--Film 4-->
+<article class="film">
+
+    <!-- Contient toute l'affiche du film -->
+    <div class="image-film">
+
+        <!-- Affiche du film -->
+        <img src="https://serieously.ouest-france.fr/app/uploads/2026/11/affiche-film-camembert-au-cinema-studio-tf1-2.jpg"
+             alt="Camambert">
+
+<!-- Informations directement sur l'affiche -->
+        <div class="info-film">
+
+        <h3>CAMEMBERT</h3>
+
+            <div class="bouton-film">
+
+                <a href="https://www.bing.com/videos/riverview/relatedvideo?q=Camembert+Film+bande+annonce&&mid=85C21B66AEA88C3A1B4B85C21B66AEA88C3A1B4B&churl=https%3a%2f%2fwww.youtube.com%2fchannel%2fUCsb2tMsyW2najK5my0ja9mA&mcid=102DFD38E5194002BA9C52B268F4BDF3&FORM=VRDGAR">
+                    Bande-annonce
+                </a>
+
+                <details>
+                    <summary>HORAIRES</summary>
+                </details>
+
+            </div>
+        </div>
+
+    </div>
+
+</article>
+<!--Film 5-->
+<article class="film">
+
+    <!-- Contient toute l'affiche du film -->
+    <div class="image-film">
+
+        <!-- Affiche du film -->
+        <img src="https://all.web.img.acsta.net/r_2000_x/img/38/7e/387e40beb5ab8a113890553da1ae52b8.jpg"
+             alt="Hunger Games:Lever de soleil sur la moison">
+
+<!-- Informations directement sur l'affiche -->
+        <div class="info-film">
+
+        <h3>HUNGER GAMES:LEVER DE SOLEIL SUR LA MOISON</h3>
+
+            <div class="bouton-film">
+
+                <a href="https://www.bing.com/videos/riverview/relatedvideo?q=bande+annonce+hunger+games+2026&mid=23AA3651A57429807D6123AA3651A57429807D61&churl=&mcid=3EF4605A9C454C4DA1DC988F77C67203&FORM=VIRE">
+                    Bande-annonce
+                </a>
+
+                <details>
+                    <summary>HORAIRES</summary>
+                </details>
+
+            </div>
+        </div>
+
+    </div>
+
+</article>
+</div>        <!--fin liste de film-->
+<!-- Bouton film précédent -->
+    <button class="fleche" id="precedent">❮</button>
+
+<!-- Bouton film suivant -->
+    <button class="fleche" id="suivant">❯</button>
+
+</div>        <!--fin carroussel-->
+</section>    <!--fin section nouveautes-->
+</main>       <!--fin contenue principal-->
+<script src="Accueil.js"></script>
 </body>
 </html>
