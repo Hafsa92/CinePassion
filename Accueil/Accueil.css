@@ -334,3 +334,82 @@ p{
 #suivant{
     right: 35px;
 }
+
+
+/* ===================== RESPONSIVE pour les temphone ===================== */
+
+/* @media (max-width: 900px) = ces règles ne s'appliquent que si l'écran fait 900px de large ou moins (tablette) */
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 20px 5%;               /* moins de marge sur les côtés */
+    }
+
+    .films {
+        padding: 30px 5%;               /* moins de marge sur les côtés */
+    }
+
+    .informations {
+        max-width: 100%;                /* le texte peut prendre toute la largeur disponible */
+    }
+}
+
+/* Écrans de 600px ou moins (téléphone) */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;         /* logo au-dessus, menu en dessous */
+        gap: 12px;                      /* espace entre le logo et le menu */
+    }
+
+    nav {
+        gap: 20px;                      /* liens du menu plus rapprochés */
+    }
+
+    nav a {
+        font-size: 14px;                /* texte du menu plus petit */
+    }
+
+    .jours {
+        justify-content: flex-start;    /* les jours commencent à gauche (sinon le premier est coupé) */
+        gap: 24px;                      /* jours plus rapprochés */
+        overflow-x: auto;               /* on peut faire défiler les jours avec le doigt */
+        padding: 16px 5%;
+    }
+
+    .jours a {
+        white-space: nowrap;            /* "MER. 25 NOV." reste sur une seule ligne */
+        flex-shrink: 0;                 /* un jour ne se rétrécit jamais */
+    }
+
+    .film {
+        flex-direction: column;         /* affiche, infos et horaires les uns sous les autres */
+        align-items: flex-start;        /* alignés à gauche */
+    }
+
+    .affiche {
+        width: 160px;                   /* affiche plus petite */
+    }
+
+    .affiche img {
+        height: 215px;                  /* hauteur adaptée à la nouvelle largeur */
+    }
+
+    .badge {
+        top: 10px;                      /* "NOUVEAU" posé sur l'affiche, en haut à gauche */
+        left: 10px;
+    }
+
+    .informations h2 {
+        font-size: 20px;                /* titre un peu plus petit */
+    }
+
+    .horaires {
+        flex: none;                     /* la zone ne cherche plus à s'étirer à droite */
+        width: 100%;                    /* elle prend toute la largeur de l'écran */
+    }
+
+    .seance {
+        padding: 10px 12px;             /* boutons d'horaires plus compacts */
+    }
+}

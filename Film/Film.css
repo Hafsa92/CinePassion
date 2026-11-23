@@ -1,154 +1,332 @@
-/* Style général */
+/* ===================== STYLE GÉNÉRAL ===================== */
+
+/* * = tous les éléments de la page */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;                  /* enlève les marges extérieures mises par défaut par le navigateur */
+    padding: 0;                 /* enlève les marges intérieures par défaut */
+    box-sizing: border-box;     /* le padding et la bordure sont comptés dans la largeur : plus simple pour calculer les tailles */
 }
+
+/* body = toute la page visible */
 body{
-    background-color: #0b0B0D;
-    color: white;
-    font-family: Arial, sans-serif;
+    background-color: #0b0B0D;      /* fond presque noir (ambiance cinéma) */
+    color: white;                   /* texte blanc par défaut */
+    font-family: Arial, sans-serif; /* police Arial ; sans-serif = police de secours si Arial n'existe pas */
 }
-/* Navigation */
+
+/* ===================== NAVIGATION ===================== */
+
+/* .navbar = la barre du haut (classe du <header> dans le HTML) */
 .navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 7%;
-    background-color: #141416;
-    border-bottom: 1px solid #292929;
+    display: flex;                      /* flexbox : place le logo et le menu côte à côte */
+    justify-content: space-between;     /* logo tout à gauche, menu tout à droite */
+    align-items: center;                /* centre les éléments verticalement */
+    padding: 25px 7%;                   /* espace intérieur : 25px en haut/bas, 7% à gauche/droite */
+    background-color: #141416;          /* fond gris très foncé, un peu plus clair que la page */
+    border-bottom: 1px solid #292929;   /* fine ligne grise sous la barre */
 }
+
+/* .logo = le lien "CinéPassion" */
 .logo {
-    font-size: 27px;
-    font-weight: bold;
-    color: #e50925;
-    text-decoration: none;
+    font-size: 27px;            /* taille du texte */
+    font-weight: bold;          /* texte en gras */
+    color: #e50925;             /* rouge */
+    text-decoration: none;      /* enlève le soulignement des liens */
 }
+
+/* nav = le menu (Accueil, Film, Avant-premières) */
 nav{
-    display: flex;
-    gap: 35px;
+    display: flex;              /* les liens du menu sont côte à côte */
+    gap: 35px;                  /* espace de 35px entre chaque lien */
 }
+
+/* nav a = chaque lien du menu */
 nav a {
-    color: #ddd;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.3S;
+    color: #ddd;                /* gris clair */
+    text-decoration: none;      /* pas de soulignement */
+    font-size: 16px;            /* taille du texte */
+    transition: 0.3s;           /* CORRIGÉ (0.3S -> 0.3s) : le changement de couleur dure 0,3 seconde */
 }
-nav a:hover
+
+/* :hover = souris sur le lien ; .active = page où on se trouve */
+nav a:hover,                    /* CORRIGÉ : la virgule manquait. Elle veut dire "ou" entre les deux */
 nav a.active {
-    color: #e50925;
+    color: #e50925;             /* le lien devient rouge */
 }
 
-/* NAVIGATION DES JOURS */
+/* ===================== NAVIGATION DES JOURS ===================== */
 
+/* .jours = la bande AUJOURD'HUI, DEMAIN, VEN. 20 NOV... */
 .jours {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    background-color: #141416;
-    padding: 20px;
-    border-bottom: 1px solid #292929;
+    display: flex;                      /* les jours sont côte à côte */
+    justify-content: center;            /* centrés horizontalement */
+    align-items: center;                /* centrés verticalement */
+    gap: 40px;                          /* espace de 40px entre les jours */
+    background-color: #141416;          /* même gris foncé que la barre du haut */
+    padding: 20px;                      /* espace intérieur de 20px tout autour */
+    border-bottom: 1px solid #292929;   /* fine ligne grise en dessous */
 }
 
+/* .jours a = chaque jour (ce sont des liens) */
 .jours a {
-    color: #ddd;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
+    color: #ddd;                /* gris clair */
+    text-decoration: none;      /* pas de soulignement */
+    font-size: 14px;            /* taille du texte */
+    font-weight: bold;          /* en gras */
 }
 
+/* survol ou jour sélectionné */
 .jours a:hover,
 .jours a.active {
-    color: #e50925;
+    color: #e50925;             /* devient rouge */
 }
 
+/* ===================== SECTION FILMS ===================== */
 
-/* SECTION FILMS */
-
+/* .films = le <main> qui contient tous les films */
 .films {
-    padding: 50px 7%;
-    background-color: #0b0B0D;
-    min-height: 600px;
+    padding: 50px 7%;                   /* 50px en haut/bas, 7% sur les côtés */
+    background-color: #0b0B0D;          /* fond presque noir */
+    min-height: 600px;                  /* hauteur minimum de 600px, même s'il y a peu de contenu */
 }
 
+/* .film = un film (affiche + infos + horaires) */
 .film {
-    display: flex;
-    align-items: flex-start;
-    gap: 25px;
+    display: flex;                  /* affiche, infos et horaires côte à côte */
+    align-items: flex-start;        /* tous alignés en haut (pas étirés en hauteur) */
+    gap: 25px;                      /* espace de 25px entre l'affiche et les infos */
 }
 
+/* ===================== AFFICHE ===================== */
 
-/* AFFICHE */
-
+/* .affiche = la boîte autour de l'image */
 .affiche {
-    position: relative;
-    width: 205px;
-    flex-shrink: 0;
+    position: relative;     /* sert de repère pour placer le badge "NOUVEAU" par rapport à cette boîte */
+    width: 205px;           /* largeur fixe de 205px */
+    flex-shrink: 0;         /* interdit à la boîte de rétrécir quand la place manque */
 }
 
+/* l'image de l'affiche */
 .affiche img {
-    width: 100%;
-    height: 270px;
-    object-fit: cover;
-    border-radius: 5px;
+    width: 100%;            /* l'image prend toute la largeur de la boîte (205px) */
+    height: 270px;          /* hauteur fixe de 270px */
+    object-fit: cover;      /* l'image remplit la case sans être déformée (un peu rognée si besoin) */
+    border-radius: 5px;     /* coins légèrement arrondis */
 }
 
+/* .badge = l'étiquette "NOUVEAU" */
 .badge {
-    position: absolute;
-    top: -35px;
-    left: 230px;
-    background-color: #e50925;
-    color: white;
-    padding: 7px 12px;
-    font-size: 11px;
-    font-weight: bold;
+    position: absolute;             /* placé librement par rapport à .affiche (qui est "relative") */
+    top: -35px;                     /* remonte de 35px au-dessus du haut de l'affiche */
+    left: 230px;                    /* décalé de 230px vers la droite : il se retrouve à droite de l'affiche */
+    background-color: #e50925;      /* fond rouge */
+    color: white;                   /* texte blanc */
+    padding: 7px 12px;              /* espace intérieur : 7px haut/bas, 12px gauche/droite */
+    font-size: 11px;                /* petit texte */
+    font-weight: bold;              /* en gras */
 }
 
-/* INFORMATIONS */
+/* ===================== INFORMATIONS ===================== */
 
+/* .informations = le bloc avec titre, date, genre... */
 .informations {
-    max-width: 330px;
+    max-width: 330px;       /* largeur maximum : le texte passe à la ligne au-delà de 330px */
 }
 
+/* le titre du film (h2) dans les informations */
 .informations h2 {
-    color: white;
-    font-size: 23px;
-    margin-bottom: 12px;
+    color: white;           /* texte blanc */
+    font-size: 23px;        /* taille du titre */
+    margin-bottom: 12px;    /* espace de 12px sous le titre */
 }
 
+/* .note = la case "4,1 ★★★★★" */
 .note {
-    display: inline-block;
-    background-color: #1c1c20;
-    color: #e50925;
-    padding: 12px;
-    border-radius: 7px;
-    margin-bottom: 20px;
+    display: inline-block;          /* la case prend la taille de son contenu, mais accepte padding et marges */
+    background-color: #1c1c20;      /* fond gris foncé */
+    color: #e50925;                 /* texte rouge */
+    padding: 12px;                  /* espace intérieur de 12px */
+    border-radius: 7px;             /* coins arrondis */
+    margin-bottom: 20px;            /* espace de 20px en dessous */
 }
 
+/* les 5 types de paragraphes d'infos : même mise en forme */
 .date,
 .genre,
 .realisateur,
 .acteurs,
 .synopsis {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    font-size: 16px;        /* taille du texte */
+    line-height: 1.6;       /* hauteur des lignes : 1,6 fois la taille du texte (texte aéré) */
+    margin-bottom: 10px;    /* espace de 10px sous chaque paragraphe */
 }
 
+/* date, réalisateur et synopsis en gris */
 .date,
 .realisateur,
 .synopsis {
-    color: #aaa;
+    color: #aaa;            /* gris moyen (infos secondaires) */
 }
 
+/* genre et acteurs en blanc */
 .genre,
 .acteurs {
-    color: white;
+    color: white;           /* blanc (mis en valeur) */
 }
 
+/* .synopsis a = un lien dans le synopsis (par exemple "Lire la suite") */
 .synopsis a {
-    color: #e50925;
-    text-decoration: none;
-    font-weight: bold;
+    color: #e50925;             /* rouge */
+    text-decoration: none;      /* pas de soulignement */
+    font-weight: bold;          /* en gras */
+}
+
+/* ===================== ESPACE ENTRE LES FILMS ===================== */
+
+/* Ces règles s'ajoutent à celles de .film plus haut (le navigateur additionne les deux blocs) */
+.film {
+    flex-wrap: wrap;                    /* les blocs passent à la ligne s'il manque de la place (petit écran) */
+    padding-bottom: 40px;               /* espace de 40px sous le contenu du film */
+    margin-bottom: 40px;                /* espace de 40px avant le film suivant */
+    border-bottom: 1px solid #292929;   /* ligne grise qui sépare les films */
+}
+
+/* ===================== HORAIRES ===================== */
+
+/* .horaires = la zone avec tous les boutons d'horaires, à droite */
+.horaires {
+    flex: 1 1 300px;            /* grandit | rétrécit | taille de départ : la zone prend la place restante, 300px au départ */
+    display: flex;              /* les boutons d'horaires sont côte à côte */
+    flex-wrap: wrap;            /* ils passent à la ligne quand il n'y a plus de place */
+    gap: 12px;                  /* espace de 12px entre les boutons */
+    align-content: flex-start;  /* les lignes de boutons restent en haut, collées entre elles */
+}
+
+/* .seance = un bouton d'horaire (comme sur UGC) */
+.seance {
+    display: flex;                      /* l'heure et la version (VF) sont côte à côte */
+    align-items: center;                /* centrés verticalement */
+    gap: 14px;                          /* espace de 14px entre l'heure et la version */
+    background-color: #141416;          /* fond gris très foncé */
+    color: white;                       /* texte blanc */
+    border: 1px solid #292929;          /* fine bordure grise */
+    border-radius: 8px;                 /* coins arrondis */
+    padding: 12px 16px;                 /* espace intérieur : 12px haut/bas, 16px gauche/droite */
+    cursor: pointer;                    /* la souris devient une main au survol */
+    text-align: left;                   /* texte aligné à gauche (un bouton centre son texte par défaut) */
+    transition: 0.3s;                   /* animation douce de 0,3 seconde au survol */
+}
+
+/* l'heure (h2) dans le bouton */
+.seance h2 {
+    font-size: 22px;            /* grosse heure, bien lisible */
+}
+
+/* le petit texte du bouton : "(fin 21:31)" et "Salle 11" */
+.seance small {
+    display: block;             /* chaque petit texte est sur sa propre ligne */
+    color: #aaa;                /* gris moyen */
+    font-size: 12px;            /* petite taille */
+}
+
+/* .details = la partie de droite du bouton (VF + salle) */
+.seance .details {
+    border-left: 1px solid #292929;     /* trait gris vertical qui sépare l'heure de la version */
+    padding-left: 12px;                 /* espace de 12px entre le trait et le texte */
+}
+
+/* VF ou VO en rouge */
+.seance .details strong {
+    color: #e50925;             /* rouge */
+}
+
+/* quand la souris est sur le bouton d'horaire */
+.seance:hover {
+    border-color: #e50925;          /* la bordure devient rouge */
+    background-color: #1d1d20;      /* le fond s'éclaircit un peu */
+}
+/* Message quand il n'y a pas de séance */
+#message {
+    padding: 20px 7% 0;     /* espace autour du message */
+    color: #aaa;            /* gris moyen */
+}
+
+
+
+/* ===================== RESPONSIVE pour les temphone ===================== */
+
+/* @media (max-width: 900px) = ces règles ne s'appliquent que si l'écran fait 900px de large ou moins (tablette) */
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 20px 5%;               /* moins de marge sur les côtés */
+    }
+
+    .films {
+        padding: 30px 5%;               /* moins de marge sur les côtés */
+    }
+
+    .informations {
+        max-width: 100%;                /* le texte peut prendre toute la largeur disponible */
+    }
+}
+
+/* Écrans de 600px ou moins (téléphone) */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;         /* logo au-dessus, menu en dessous */
+        gap: 12px;                      /* espace entre le logo et le menu */
+    }
+
+    nav {
+        gap: 20px;                      /* liens du menu plus rapprochés */
+    }
+
+    nav a {
+        font-size: 14px;                /* texte du menu plus petit */
+    }
+
+    .jours {
+        justify-content: flex-start;    /* les jours commencent à gauche (sinon le premier est coupé) */
+        gap: 24px;                      /* jours plus rapprochés */
+        overflow-x: auto;               /* on peut faire défiler les jours avec le doigt */
+        padding: 16px 5%;
+    }
+
+    .jours a {
+        white-space: nowrap;            /* "MER. 25 NOV." reste sur une seule ligne */
+        flex-shrink: 0;                 /* un jour ne se rétrécit jamais */
+    }
+
+    .film {
+        flex-direction: column;         /* affiche, infos et horaires les uns sous les autres */
+        align-items: flex-start;        /* alignés à gauche */
+    }
+
+    .affiche {
+        width: 160px;                   /* affiche plus petite */
+    }
+
+    .affiche img {
+        height: 215px;                  /* hauteur adaptée à la nouvelle largeur */
+    }
+
+    .badge {
+        top: 10px;                      /* "NOUVEAU" posé sur l'affiche, en haut à gauche */
+        left: 10px;
+    }
+
+    .informations h2 {
+        font-size: 20px;                /* titre un peu plus petit */
+    }
+
+    .horaires {
+        flex: none;                     /* la zone ne cherche plus à s'étirer à droite */
+        width: 100%;                    /* elle prend toute la largeur de l'écran */
+    }
+
+    .seance {
+        padding: 10px 12px;             /* boutons d'horaires plus compacts */
+    }
 }

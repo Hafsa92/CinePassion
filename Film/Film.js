@@ -9,3 +9,4 @@ liensJours.forEach((lien, index) => {
     lien.textContent = date.toLocaleDateString("fr-FR", options).toUpperCase();
   }
 });
+

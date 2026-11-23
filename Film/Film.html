@@ -11,92 +11,162 @@
 <body>
 <header class="navbar">
     <a href="../Accueil/accueil.html" class="logo">Ciné<span>Passion</span></a>
-<!-- en gros sa permet que si j'appuis sur le logo sa revien a l'acceuille-->
     <nav>
       <a href="../Accueil/accueil.html">Accueil</a>
-      <a href="../Film/film.html">Film</a>
+      <a href="../Film/Film.html">Film</a>
       <a href="../Avant-premieres/avant-premieres.html">Avant-premières</a>
-<!-- Les 3 ligne de au dessus -clique sur accueile film ou avant premier sa nous emmenne a la page -->
     </nav>
 </header>
 
 <!-- Navigation des jours -->
 <section class="jours">
-    <a href="#" class="active">AUJOURD'HUI</a>
-    <a href="#">DEMAIN</a>
-    <a href="#">VEN. 20 NOV.</a>
-    <a href="#">SAM. 21 NOV.</a>
-    <a href="#">DIM. 22 NOV.</a>
-    <a href="#">LUN. 23 NOV.</a>
-    <a href="#">MAR. 24 NOV.</a>
+    <a href="#" class="active" data-jour="lun23">AUJOURD'HUI</a>
+    <a href="#" data-jour="mar24">DEMAIN</a>
+    <a href="#" data-jour="mer25">MER. 25 NOV.</a>
+    <a href="#" data-jour="jeu26">JEU. 26 NOV.</a>
+    <a href="#" data-jour="ven27">VEN. 27 NOV.</a>
+    <a href="#" data-jour="sam28">SAM. 28 NOV.</a>
+    <a href="#" data-jour="dim29">DIM. 29 NOV.</a>
 </section>
-<!-- Section du film -->
+
+<p id="message"></p>
+
+<!-- Section des films -->
 <main class="films">
 
+    <!-- ========== FILM 1 : CAMEMBERT ========== -->
     <div class="film">
-
-         </- Affiche -/>
+        <!-- Affiche -->
         <div class="affiche">
             <img src="Camembert.jpg" alt="Affiche Camembert">
             <span class="badge">NOUVEAU</span>
         </div>
 
-         </- Informations -/>
+        <!-- Informations -->
         <div class="informations">
-
             <h2>CAMEMBERT</h2>
-
-            <div class="note">
-                4,1 ★★★★★
-            </div>
-
-            <p class="date">
-                Sortie le 18 novembre 2026
-            </p>
-
-            <p class="genre">
-                Comédie (1h31)
-            </p>
-
-            <p class="realisateur">
-                De Matthieu Rumani, Nicolas Slomka
-            </p>
-
-            <p class="acteurs">
-                Avec Kristin Scott Thomas, Alex Lutz,
-                Pascale Arbillot
-            </p>
+            <div class="note">4,1 ★★★★★</div>
+            <p class="date">Sortie le 18 novembre 2026</p>
+            <p class="genre">Comédie (1h31)</p>
+            <p class="realisateur">De Matthieu Rumani, Nicolas Slomka</p>
+            <p class="acteurs">Avec Kristin Scott Thomas, Alex Lutz, Pascale Arbillot</p>
+        </div>
 
         <!-- Horaires -->
         <div class="horaires">
-
             <button class="seance">
-                <div>
-                    <h2>20:00</h2>
-                    <small>(fin 21:52)</small>
-                </div>
-
-                <div class="details">
-                    <strong>VF</strong>
-                    <small>Salle 11</small>
-                </div>
+                <div><h2>20:00</h2><small>(fin 21:31)</small></div>
+                <div class="details"><strong>VF</strong><small>Salle 11</small></div>
             </button>
-
             <button class="seance">
-                <div>
-                    <h2>22:00</h2>
-                    <small>(fin 23:52)</small>
-                </div>
-
-                <div class="details">
-                    <strong>VF</strong>
-                    <small>Salle 11</small>
-                </div>
+                <div><h2>22:00</h2><small>(fin 23:31)</small></div>
+                <div class="details"><strong>VF</strong><small>Salle 11</small></div>
             </button>
-
         </div>
-
     </div>
-        <script src="Film.js"></script>
+
+    <!-- ========== FILM 2 : HUNGER GAMES ========== -->
+    <div class="film">
+        <div class="affiche">
+            <img src="Hunger games.jpg" alt="Affiche Hunger Games : Lever de soleil sur la moisson">
+            <span class="badge">NOUVEAU</span>
+        </div>
+        <div class="informations">
+            <h2>HUNGER GAMES : LEVER DE SOLEIL SUR LA MOISSON</h2>
+            <p class="date">Sortie le 18 novembre 2026</p>
+            <p class="genre">Action / Aventure (2h38)</p>
+            <p class="realisateur">De Francis Lawrence</p>
+        </div>
+        <div class="horaires">
+            <button class="seance"><div><h2>10:30</h2><small>(fin 13:08)</small></div><div class="details"><strong>VO</strong></div></button>
+            <button class="seance"><div><h2>10:45</h2><small>(fin 13:23)</small></div><div class="details"><strong>VF</strong></div></button>
+            <button class="seance"><div><h2>14:00</h2><small>(fin 16:38)</small></div><div class="details"><strong>VO</strong></div></button>
+            <button class="seance"><div><h2>14:00</h2><small>(fin 16:38)</small></div><div class="details"><strong>VF</strong></div></button>
+            <button class="seance"><div><h2>17:15</h2><small>(fin 19:53)</small></div><div class="details"><strong>VF</strong></div></button>
+            <button class="seance"><div><h2>17:20</h2><small>(fin 19:58)</small></div><div class="details"><strong>VO</strong></div></button>
+            <button class="seance"><div><h2>20:30</h2><small>(fin 23:08)</small></div><div class="details"><strong>VF</strong></div></button>
+            <button class="seance"><div><h2>20:45</h2><small>(fin 23:23)</small></div><div class="details"><strong>VO</strong></div></button>
+            <button class="seance"><div><h2>21:20</h2><small>(fin 23:58)</small></div><div class="details"><strong>VF</strong></div></button>
+        </div>
+    </div>
+
+    <!-- ========== FILM 3 : JUPITER ========== -->
+    <div class="film">
+        <div class="affiche">
+            <img src="Jupiter.jpg" alt="Affiche Jupiter">
+            <span class="badge">NOUVEAU</span>
+        </div>
+        <div class="informations">
+            <h2>JUPITER</h2>
+            <p class="date">Sortie le 18 novembre 2026</p>
+            <p class="genre">Thriller (1h27)</p>
+            <p class="realisateur">De Alexandre Smia</p>
+        </div>
+        <div class="horaires">
+            <button class="seance"><div><h2>10:45</h2><small>(fin 12:12)</small></div></button>
+            <button class="seance"><div><h2>16:00</h2><small>(fin 17:27)</small></div></button>
+            <button class="seance"><div><h2>18:00</h2><small>(fin 19:27)</small></div></button>
+            <button class="seance"><div><h2>20:00</h2><small>(fin 21:27)</small></div></button>
+        </div>
+    </div>
+
+    <!-- ========== FILM 4 : IL FAUT BRÛLER MAMAN ========== -->
+    <div class="film">
+        <div class="affiche">
+            <img src="IlFautBrulerMaman.jpg" alt="Affiche Il faut brûler maman">
+        </div>
+        <div class="informations">
+            <h2>IL FAUT BRÛLER MAMAN</h2>
+            <p class="date">Sortie le 11 novembre 2026</p>
+            <p class="genre">Comédie (1h21)</p>
+            <p class="realisateur">De Albert Dupontel</p>
+        </div>
+        <div class="horaires">
+            <button class="seance"><div><h2>13:45</h2><small>(fin 15:06)</small></div></button>
+            <button class="seance"><div><h2>18:20</h2><small>(fin 19:41)</small></div></button>
+            <button class="seance"><div><h2>20:15</h2><small>(fin 21:36)</small></div></button>
+            <button class="seance"><div><h2>22:15</h2><small>(fin 23:36)</small></div></button>
+        </div>
+    </div>
+
+    <!-- ========== FILM 5 : SCROOGE ========== -->
+    <div class="film">
+        <div class="affiche">
+            <img src="Scrooge.jpg" alt="Affiche Scrooge">
+        </div>
+        <div class="informations">
+            <h2>SCROOGE</h2>
+            <p class="date">Sortie le 11 novembre 2026</p>
+            <p class="genre">Fantastique (1h45)</p>
+            <p class="realisateur">De Ti West</p>
+        </div>
+        <div class="horaires">
+            <button class="seance"><div><h2>10:30</h2><small>(fin 12:15)</small></div><div class="details"><strong>VO</strong></div></button>
+            <button class="seance"><div><h2>14:00</h2><small>(fin 15:45)</small></div><div class="details"><strong>VF</strong></div></button>
+            <button class="seance"><div><h2>16:30</h2><small>(fin 18:15)</small></div><div class="details"><strong>VO</strong></div></button>
+            <button class="seance"><div><h2>19:05</h2><small>(fin 20:50)</small></div><div class="details"><strong>VO</strong></div></button>
+            <button class="seance"><div><h2>22:00</h2><small>(fin 23:45)</small></div><div class="details"><strong>VF</strong></div></button>
+        </div>
+    </div>
+
+    <!-- ========== FILM 6 : GODZILLA MINUS ZERO ========== -->
+    <div class="film">
+        <div class="affiche">
+            <img src="GodzillaMinusZero.jpg" alt="Affiche Godzilla Minus Zero">
+        </div>
+        <div class="informations">
+            <h2>GODZILLA MINUS ZERO</h2>
+            <p class="date">Sortie en novembre 2026</p>
+            <p class="genre">Science-fiction (2h15)</p>
+            <p class="realisateur">De Takashi Yamazaki</p>
+        </div>
+        <div class="horaires">
+            <button class="seance"><div><h2>21:40</h2><small>(fin 23:55)</small></div><div class="details"><strong>VF</strong></div></button>
+        </div>
+    </div>
+
+</main>
+
+<script src="Film.js"></script>
 </body>
 </html>
