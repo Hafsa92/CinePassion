@@ -2,18 +2,18 @@
 /* Style général */
 
 
-/* evite que chaque navigateur face cest popore marge et espace*/
+/* evite que chaque navigateur fasse cest popore marge et espace*/
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;                 /* Supprime les marges auto */
+    padding: 0;                /* Supprime les espaces auto */
+    box-sizing: border-box;    /* Inclut les bordures et espaces intérieurs dans les dimensions */
 }
 
 /* definie le style general de la page*/
 body{
-    background-color: #0b0B0D;
-    color: white;
-    font-family: Arial, sans-serif;
+    background-color: #0b0B0D;       /* Définit couleur de fond */
+    color: white;                    /* Définit couleur du texte */
+    font-family: Arial, sans-serif;  /* Définit police d'écriture */
 }
 
 
@@ -21,9 +21,9 @@ body{
 
 
 .navbar{                                   /*oragnise et donne l'apparence barre navig*/
-    display: flex;                         /*aligne */
+    display: flex;                         /* aligne et organise avec flebox */
     justify-content: space-between;        /*ecarte*/
-    align-items: center;           
+    align-items: center;                   /*centre verticalement*/
     padding: 25px 7%;                      /*ajoute de l'espca*/
     background-color: #141416;
     border-bottom: 1px solid #292929;    /*ajoute bordure*/
@@ -44,19 +44,19 @@ nav{                                     /*balise pour lien*/
 
 /* apparence lien du menu*/
 nav a {
-    color: #ddd;
-    text-decoration: none;                /*supprime soulignement*/
-    font-size: 16px;
-    transition: 0.3s;
+    color: #ddd;              /* Donne une couleur gris clair aux liens */
+    text-decoration: none;    /* Supprime le soulignement */
+    font-size: 16px;          /* Définit la taille du texte */
+    transition: 0.3s;          /* Rend les changements visuels */
 }
 
 /* changement coueleur au survol*/
 nav a:hover {
-    color: #e50925;
+    color: #e50925;            /*lien rouge au survol*/
 }
 
 /* va mettre en evidence la page utiliser*/
-nav a.active{                               /*lien avec classe active*/
+nav a.active{                               /*lien avec classe active en rouge*/
     color: #e50925;
 }
 
@@ -73,13 +73,13 @@ nav a.active{                               /*lien avec classe active*/
     max-width: 750px;                        /*largeur max 750pixel*/
     display: flex;
     flex-direction: column;                  /*place les un ss ls autrs*/
-    align-items: flex-start;
-    gap: 18px;
+    align-items: flex-start;                 /*aligne gauche*/
+    gap: 18px;                               /*espace*/
 }
 
 /*texte dans la banniere*/
 .categorie{
-    display: block;
+    display: block;           /*affichage bloc*/
     color: #e50925;
     font-size: 15px;
     margin-bottom: 20px;
@@ -87,10 +87,10 @@ nav a.active{                               /*lien avec classe active*/
 
 /* style de la banniere*/
 .presentation h1 {
-    font-size: 48px;
-    line-height: 1.2;
+    font-size: 48px;                      /*taille titre*/
+    line-height: 1.2;               /*espace ligne*/
     margin-bottom: 25px;
-    font-weight: 800;
+    font-weight: 800;              /*titre epais*/
     letter-spacing: 1px;
     text-shadow: 0 3px 15px rgba(229, 9, 37, 0.25);
 }
@@ -101,12 +101,12 @@ nav a.active{                               /*lien avec classe active*/
     font-size: 18px;
     line-height: 1.7;
     margin-bottom: 20px;
-    max-width: 650px;
+    max-width: 650px;      /*limit larg parag*/
 }
 
 /*bouton banniere*/
 .presentation a{
-    display: inline-block;
+    display: inline-block;        /*dimens et espace liens*/
     background-color: #e50925;
     color: white;
     padding: 14px 25px;
@@ -118,7 +118,7 @@ nav a.active{                               /*lien avec classe active*/
 
 .presentation a:hover{
     background-color: #ff1a36;
-    transform: translateY(-4px);
+    transform: translateY(-4px);       /*deplace bouton vers le h*/
     transition: 0.3s ease;
 }
 
@@ -256,7 +256,7 @@ p{
     text-align: center;
     color: white;
     font-size: 30px;
-    z-index: 2;
+    z-index: 2;               /*place bouton au dessus de l'image*/
 }
 
 .image-film .bouton-film{
